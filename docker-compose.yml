@@ -1,0 +1,11 @@
+services:
+  client:
+    container_name: "common_frontend"
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - HTTP_PROXY=your_proxy
+      - HTTPS_PROXY=your_proxy
+      - NO_PROXY=localhost,127.0.0.1
