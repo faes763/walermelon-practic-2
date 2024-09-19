@@ -1,6 +1,6 @@
 {
   "name": "common-telegram",
-  "version": "0.1.0",
+  "version": "0.1.9",
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
@@ -23,11 +23,11 @@
     "zustand": "^4.5.5"
   },
   "devDependencies": {
-    "@types/node": "^20.16.5",
+    "@types/node": "^22.5.5",
     "@types/react": "^18.3.7",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.20",
-    "eslint": "^8.57.1",
+    "eslint": "^9.10.0",
     "eslint-config-next": "14.2.12",
     "husky": "^9.1.6",
     "postcss": "^8.4.47",
