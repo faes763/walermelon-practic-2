@@ -1,8 +1,33 @@
 'use client'
 
 import { LoadingButton } from "@/common/ui/loading-button";
-import { WebApp } from "@/common/utils/telegram";
-import { useEffect, useLayoutEffect, useState } from "react";
+// import { WebApp } from "@/common/utils/telegram";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+
+export function WebApp() {
+    const webApp = useRef<null | TelegramWebAppAPI>(null);
+
+    const [telegram,setTelegram] = useState<TelegramWebAppAPI | null>(null);
+
+    useEffect(()=>{
+        const interval =  setInterval(()=>{
+            if(window.Telegram) {
+
+                const tg = window.Telegram?.WebApp;
+                webApp.current = tg;
+                setTelegram(tg);
+                clearInterval(interval);
+            }
+        },5);
+        return(()=>{
+            clearInterval(interval);
+        });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
+    
+    return telegram;
+}
+
 
 interface IConfigWebApp {
     // WebApp на всю высоту телеграмма (в мобильной версии)
@@ -30,6 +55,7 @@ export function ExpandedTelegram() {
             setLoading(false);
             webApp?.ready();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
 
     if(loading) {

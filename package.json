@@ -10,28 +10,31 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "axios": "^1.7.7",
-    "class-variance-authority": "^0.7.0",
+    "@types/superagent": "^8.1.9",
+    "axios": "^1.8.3",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "debounce": "^2.1.1",
+    "debounce": "^2.2.0",
     "lucide-react": "^0.441.0",
-    "next": "^14.2.12",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "tailwind-merge": "^2.5.2",
+    "next": "^15.2.3",
+    "nookies": "^2.5.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "superagent": "^10.2.0",
+    "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
-    "zustand": "^4.5.5"
+    "zustand": "^4.5.6"
   },
   "devDependencies": {
-    "@types/node": "^22.5.5",
-    "@types/react": "^18.3.7",
-    "@types/react-dom": "^18.3.0",
-    "autoprefixer": "^10.4.20",
-    "eslint": "^9.10.0",
+    "@types/node": "^22.13.10",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.22.0",
     "eslint-config-next": "14.2.12",
-    "husky": "^9.1.6",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.12",
-    "typescript": "^5.6.2"
+    "husky": "^9.1.7",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.2"
   }
 }

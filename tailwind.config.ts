@@ -22,7 +22,16 @@ const config = {
       },
     },
     extend: {
+      fontSize: {
+				small: '0.5rem',
+			},
+
+      screens: {
+				"web": {raw: "(max-height: 660px) and (min-width: 390px)"}
+			},
+
       colors: {
+				page: "#0C0C0C",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
