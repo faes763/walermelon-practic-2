@@ -6,17 +6,7 @@ body {
   perspective: 300px;
 }
 
-html,
-body {
-  overscroll-behavior-y: contain; /* Предотвращает перетягивание на iOS */
-  height: -webkit-fill-available;
-  min-height: 100%;
-  perspective: 300px;
-
-}
-
 html {
-  overflow: hidden;
   font-size: 4.2675vw;
 }
 
@@ -84,14 +74,25 @@ body::-webkit-scrollbar {
 @layer base {
   * {
     @apply border-border;
-    scroll-behavior: smooth;
-
   }
   body {
-    @apply bg-page min-h-dvh text-white;
+    @apply bg-page text-text;
   }
 }
 
 .center {
   @apply flex items-center justify-center;
+}
+
+.swiper-button-next {
+  @apply !-right-7;
+
+}
+
+.swiper-button-prev {
+  @apply !-left-7;
+}
+
+.swiper {
+  @apply !overflow-visible;
 }

@@ -5,7 +5,7 @@ const ngrokLink = "b9e9-176-212-188-21.ngrok-free.app";
 
 const nextConfig = {
     env: {
-        BASE_URL: "",
+        BASE_URL: "http://103.88.242.42/api/",
         DEV_TOKEN: "",
     },
     experimental: {
@@ -16,6 +16,10 @@ const nextConfig = {
             {
                 protocol: 'https',
                 hostname: 't.me',
+            },
+            {
+                protocol: "http",
+                hostname: "103.88.242.42"
             },
             {
                 protocol: 'https',

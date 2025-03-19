@@ -1,10 +1,10 @@
 import type { Metadata, ResolvingMetadata, Viewport } from 'next'
 import "../styles/globals.css";
-import { inter } from "@/styles/fonts";
+import { montserrat } from "@/styles/fonts";
 import { cn } from "@/common/utils";
 import Script from "next/script";
 import { ExpandedTelegram } from '@/lib/expand-telegram';
-import { UserProvider,  } from '@/common/providers/user';
+import { Toaster } from '@/common/ui/shadcn/sonner';
 
 
 type Props = {
@@ -76,12 +76,11 @@ function RootLayout({ children }: { children: React.ReactNode }) {
         <Script  strategy="afterInteractive" id="tg-web" src="https://telegram.org/js/telegram-web-app.js"/>
       </head>
       <body
-        className={cn(inter.className,`antialiased`)}
+        className={cn(montserrat.className,`antialiased`)}
       >
         <ExpandedTelegram />
-        <UserProvider >
-          {children}
-        </UserProvider>
+        {children}
+        <Toaster />
       </body>
     </html>
   );

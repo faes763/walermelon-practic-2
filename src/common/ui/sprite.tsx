@@ -1,34 +1,42 @@
 import Image from "next/image";
+import { cn } from "../utils";
 
-type IconProps = {
+export type IconProps = {
     name: string;
     className: string;
     onClick?: () => void;
     isImage?: boolean;
     style?: React.CSSProperties;
     isPng?: boolean;
+
+    pathSprite?: string;
 };
 
-export function Sprite({
+export const Sprite:React.FC<IconProps> =({
     name,
     className,
     onClick,
     isImage,
     style, 
     isPng,
-}: IconProps): JSX.Element {
+    pathSprite,
+}) => {
     if (isImage) {
         return (
+            <>
             <Image
                 fetchPriority="high"
-                src={`/icons/${name}.${isPng ? "png" : "svg"}`}
+                priority
+                src={`/${pathSprite ?? "icons"}/${name}.${isPng ? "png" : "svg"}`}
                 alt=""
                 width={256}
                 height={256}
-                className={className}
+                className={cn(typeof onClick == "function" && "cursor-pointer", className)}
                 onClick={onClick}
                 style={style}
             />
+            {/* <link rel="preload" fetchPriority="high" as="image" href={`/${pathSprite ?? "icons"}/${name}.${isPng ? "png" : "svg"}`}/> */}
+            </>
         );
     }
 

@@ -31,7 +31,9 @@ const config = {
 			},
 
       colors: {
-				page: "#0C0C0C",
+				page: "#fff",
+        text: "#524A49",
+        orange: "#FF695A",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
