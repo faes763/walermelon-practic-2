@@ -50,7 +50,7 @@ export const NewsCard: React.FC<INews> = (news) => {
 
     return (
         <div className="px-6 py-5 border border-[#332F2E] bg-white/25 backdrop-blur rounded-[2.25rem]">
-            <p className="text-3xl font-semibold">{name}</p>
+            <p className="text-3xl line-clamp-2 text-ellipsis overflow-hidden font-semibold">{name}</p>
             <p className=" text-xs text-[#A59390]">{formatDate(created_at)}</p>
             <p className=" line-clamp-3 text-ellipsis overflow-hidden mt-3">{description}</p>
             <Drawer direction="bottom">

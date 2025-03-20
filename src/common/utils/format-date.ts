@@ -4,9 +4,9 @@ import { ru } from 'date-fns/locale';
 export const formatDate = (dateString: string): string => {
     const date = parseISO(dateString).toString();
     
-    if (isToday(date == "Invalid Date" ? dateString : date) ) {
-        return 'Сегодня';
-    }
+    // if (isToday(date == "Invalid Date" ? dateString : date) ) {
+    //     return 'Сегодня';
+    // }
     return format(date == "Invalid Date" ? dateString : date, 'd MMMM', 
         {locale: ru}
     );

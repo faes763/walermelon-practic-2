@@ -1,4 +1,5 @@
 import { IProject } from "@/common/types/project.type";
+import { cn } from "@/common/utils";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -54,12 +55,12 @@ const Project: React.FC<IProject> = (project) => {
     return (
         <div className="px-6 py-5 border border-[#332F2E] bg-white/25 backdrop-blur rounded-[2.25rem]">
             <p className="text-3xl font-semibold">{name}</p>
-            <p className=" mt-3">{description}</p>
+            <p className=" line-clamp-3 text-ellipsis overflow-hidden mt-3">{description}</p>
             <div className=" mt-6">
                 <div className=" w-4/5 mx-auto h-3 relative rounded-full bg-[#332F2E]">
                     <div 
-                        style={{width: `${Number(project.target_amount) / Number(project.current_amount) == 0 ? 1 : Number(project.current_amount)}%`}} 
-                        className=" bg-orange  h-full rounded-full"
+                        style={{width: `${100 * (Number(project.current_amount) / (Number(project.target_amount) == 0 ? 1 : Number(project.target_amount)))}%`}} 
+                        className={cn(" bg-orange   h-full rounded-full",(Number(project.current_amount) / (Number(project.target_amount)) > 0 &&  "min-w-[7%]"))}
                     />
                 </div>
                 <div className=" mt-0.5 text-xs flex justify-between items-center">
