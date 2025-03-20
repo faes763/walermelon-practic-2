@@ -79,8 +79,11 @@ function RootLayout({ children }: { children: React.ReactNode }) {
         className={cn(montserrat.className,`antialiased`)}
       >
         <ExpandedTelegram />
-        {children}
+        <div className=' desk'>
+          {children}
+        </div>
         <Toaster />
+        <div className=' fixed pointer-events-none bg-black inset-0'/>
       </body>
     </html>
   );

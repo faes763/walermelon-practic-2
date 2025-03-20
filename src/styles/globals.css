@@ -6,8 +6,19 @@ body {
   perspective: 300px;
 }
 
+.desk {
+  @apply md:max-w-96 bg-white relative z-50 md:mx-auto;
+
+}
+
 html {
-  font-size: 4.2675vw;
+  font-size: 1vw;
+}
+
+@media(max-width:768px) {
+  html {
+    font-size: 4.2675vw;
+  }
 }
 
 body::-webkit-scrollbar {
