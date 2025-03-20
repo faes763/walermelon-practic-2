@@ -1,8 +1,3 @@
-
-
-
-// const superagent = require('superagent');
-
 import { SuperAgentClient } from "./super-agent";
 
 
