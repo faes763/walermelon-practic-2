@@ -15,7 +15,8 @@ export const Me = () => {
 
     return (
         <div className=" relative min-h-[80vh]">
-            <h3 className=" uppercase text-orange font-extrabold text-4xl">Знакомство</h3>
+            <div className=" relative z-10">
+            <h3 className="  uppercase text-orange font-extrabold text-4xl">Знакомство</h3>
             <p className=" text-xl font-light mt-4">с нашим фондом</p>
 
             <Swiper spaceBetween={28} navigation={true} modules={[Navigation]} className="mySwiper h-[28rem] mt-14 ">
@@ -37,6 +38,7 @@ export const Me = () => {
             <div className=" mt-2.5 border text-center rounded-full border-[#A59390] px-2.5 py-1">
                 <p className=" font-medium">Андросенков Константин</p>
                 <p className="text-[#A59390]">директор</p>
+            </div>
             </div>
             <Image
                 src={'/icons/solid/heart.svg'}

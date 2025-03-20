@@ -25,6 +25,7 @@ export const Target = () => {
 
     return (
         <div className=" mt-24 relative min-h-[80vh]">
+            <div className=" relative z-10">
             <h3 className=" uppercase text-orange font-extrabold text-4xl">Цели нашего фонда</h3>
             <p className=" text-xl font-light mt-4">Помощь детям - это важно</p>
 
@@ -50,19 +51,20 @@ export const Target = () => {
                     </SwiperSlide>
                 ))}
             </Swiper>
+            </div>
             <Image
                 src={'/icons/solid/heart.svg'}
                 alt=""
                 width={600}
                 height={600}
-                className=" absolute pointer-events-none right-10 -bottom-10 min-w-[150vw] min-h-[120vw]"
+                className=" absolute pointer-events-none max-w-96 right-10 -bottom-10 max-md:min-w-[150vw] min-h-[120vw]"
             />
             <Image
                 src={'/icons/solid/heart.svg'}
                 alt=""
                 width={600}
                 height={600}
-                className=" absolute pointer-events-none right-0 -bottom-24 w-24 h-24"
+                className=" absolute pointer-events-none max-md:max-w-96 right-0 -bottom-24 w-24 h-24"
             />
         </div>
     );
