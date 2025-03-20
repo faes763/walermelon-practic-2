@@ -36,7 +36,7 @@ export class SuperAgentClient {
         const { query, body } = params;
 
         const url = endpoint.startsWith('/') ? `${this.baseURL}${endpoint.slice(1)}` : `${this.baseURL}${endpoint}`;
-        const request = superagent[method](url).set({...this.defaultHeaders, ...params.headers});
+        const request = superagent[method](url + "/").set({...this.defaultHeaders, ...params.headers});
 
         if (query) request.query(query);
         if (body) request.send(body);

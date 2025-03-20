@@ -17,7 +17,7 @@ export const News: React.FC<{news: INews[]}> = ({ news = []}) => {
                     className=" w-32 h-9"
                 />
             </div>
-            <h1 className=" mt-20 uppercase text-orange font-extrabold text-4xl">НОВОСТИ</h1>
+            <h1 className=" mt-20 uppercase text-orange font-extrabold text-4xl">Новости</h1>
             <p className=" text-xl font-light mt-4">самое интересное только у нас!</p>
 
             <div className=" relative">

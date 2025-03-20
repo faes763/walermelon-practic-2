@@ -5,7 +5,7 @@ const ngrokLink = "b9e9-176-212-188-21.ngrok-free.app";
 
 const nextConfig = {
     env: {
-        BASE_URL: "http://103.88.242.42/api/",
+        BASE_URL: "https://arbuz-backend.santej.space/api/",
         DEV_TOKEN: "",
     },
     experimental: {
@@ -18,8 +18,12 @@ const nextConfig = {
                 hostname: 't.me',
             },
             {
+                protocol: "https",
+                hostname: "arbuz-backend.santej.space"
+            },
+            {
                 protocol: "http",
-                hostname: "103.88.242.42"
+                hostname: "arbuz-backend.santej.space"
             },
             {
                 protocol: 'https',

@@ -96,3 +96,7 @@ body::-webkit-scrollbar {
 .swiper {
   @apply !overflow-visible;
 }
+
+.swiper-button-prev, .swiper-button-next {
+  @apply !text-orange;
+}

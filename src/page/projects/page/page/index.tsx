@@ -50,6 +50,14 @@ export const Form: React.FC<{id: string}> = ({ id }) => {
     
     return (
         <div className="px-7 pt-6 pb-24 relative overflow-hidden min-h-screen">
+            <Image
+                src={'/icons/solid/heart.svg'}
+                alt=""
+                width={600}
+                height={600}
+                className=" absolute pointer-events-none left-24 top-[40%] min-w-[140vw] min-h-[120vw]"
+            />
+            <div className=" relative z-10">
             <div className=" flex justify-end">
                 <Image
                     src={'/logo.svg'}
@@ -61,7 +69,7 @@ export const Form: React.FC<{id: string}> = ({ id }) => {
             </div>
             <h1 className=" mt-20 uppercase text-[#332F2E] font-extrabold text-4xl">Чтобы внести свой вклад, заполните форму</h1>
 
-            <form className=" mt-14 bg-white/25 space-y-7 py-10 px-6 rounded-[3.75rem] border border-[#A59390]" onSubmit={formik.handleSubmit}>
+            <form className=" mt-14 bg-white/25 backdrop-blur space-y-7 py-10 px-6 rounded-[3.75rem] border border-[#A59390]" onSubmit={formik.handleSubmit}>
                 <OutDivInput 
                     label={(
                         <p className=" text-2xl mb-1 font-semibold text-[#332F2E]">Cумма пожертвования</p>
@@ -147,6 +155,7 @@ export const Form: React.FC<{id: string}> = ({ id }) => {
 
                 <button className="mt-6 w-full  rounded-xl py-3 px-9 font-semibold bg-black text-white">ОТПРАВИТЬ</button>
             </form>
+            </div>
         </div>
     );
 };

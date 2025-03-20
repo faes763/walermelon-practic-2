@@ -7,7 +7,7 @@ class News {
 
 
     get = cache(async () => {
-        const news = await client.getBody<INews[]>('/new');
+        const news = await client.getBody<INews[]>('/news');
         return news;
     });
 }

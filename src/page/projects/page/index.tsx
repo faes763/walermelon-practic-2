@@ -7,6 +7,7 @@ import Link from "next/link";
 export const Project: React.FC<{project: IProject}> = ({ project }) => {
     return (
         <div className="px-7 pt-6 pb-24 relative overflow-hidden min-h-screen">
+            <div className=" relative z-10">
             <div className=" flex justify-end">
                 <Image
                     src={'/logo.svg'}
@@ -20,6 +21,15 @@ export const Project: React.FC<{project: IProject}> = ({ project }) => {
             <div className=" mt-14">
                 <Card {...project}/>
             </div>
+            </div>
+
+            <Image
+                src={'/icons/solid/heart.svg'}
+                alt=""
+                width={600}
+                height={600}
+                className=" absolute pointer-events-none left-24 top-[40%] min-w-[140vw] min-h-[120vw]"
+            />
         </div>
     );
 };
@@ -41,11 +51,14 @@ export const Card: React.FC<IProject> = (project) => {
             <p className="mt-1 text-[#524A49]">{project.description}</p>
             <div className=" mt-6">
                 <div className=" w-4/5 mx-auto h-3 relative rounded-full bg-[#332F2E]">
-                    <div className=" bg-orange w-3/5 h-full rounded-full"/>
+                    <div 
+                        style={{width: `${Number(project.target_amount) / Number(project.current_amount) == 0 ? 1 : Number(project.current_amount)}%`}} 
+                        className=" bg-orange  h-full rounded-full"
+                    />
                 </div>
                 <div className=" mt-0.5 text-xs flex justify-between items-center">
-                    <p>900 000</p>
-                    <p>2 000 000</p>
+                    <p>{project.current_amount}</p>
+                    <p>{project.target_amount}</p>
                 </div>
             </div>
             <div className="mt-6">

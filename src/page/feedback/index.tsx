@@ -35,6 +35,14 @@ export const Feedback: React.FC<{projects: IProject[]}> = ({ projects = [] }) =>
                 ))}
             </Swiper>
             </div>
+
+            <Image
+                            src={'/icons/solid/heart.svg'}
+                            alt=""
+                            width={600}
+                            height={600}
+                            className=" absolute pointer-events-none left-24 top-[40%] min-w-[140vw] min-h-[120vw]"
+                        />
         </div>
     );
 };

@@ -3,6 +3,8 @@ export interface IProject {
     name: string;
     description: string;
     image: string;
+    current_amount: string;
+    target_amount: string;
 }
 
 export interface IForm {

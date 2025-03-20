@@ -57,11 +57,14 @@ const Project: React.FC<IProject> = (project) => {
             <p className=" mt-3">{description}</p>
             <div className=" mt-6">
                 <div className=" w-4/5 mx-auto h-3 relative rounded-full bg-[#332F2E]">
-                    <div className=" bg-orange w-3/5 h-full rounded-full"/>
+                    <div 
+                        style={{width: `${Number(project.target_amount) / Number(project.current_amount) == 0 ? 1 : Number(project.current_amount)}%`}} 
+                        className=" bg-orange  h-full rounded-full"
+                    />
                 </div>
                 <div className=" mt-0.5 text-xs flex justify-between items-center">
-                    <p>900 000</p>
-                    <p>2 000 000</p>
+                    <p>{project.current_amount}</p>
+                    <p>{project.target_amount}</p>
                 </div>
             </div>
             <div className="mt-6">
