@@ -7,7 +7,7 @@ body {
 }
 
 .desk {
-  @apply md:max-w-96 bg-white relative z-50 md:mx-auto;
+  @apply md:max-w-96 overflow-hidden bg-white relative z-50 md:mx-auto;
 
 }
 
